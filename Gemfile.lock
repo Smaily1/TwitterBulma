@@ -95,6 +95,8 @@ GEM
     eventmachine (1.2.7)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (6.1.1)
+      sassc (~> 2.0)
     formatador (1.1.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -258,6 +260,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.8, >= 4.8.1)
+  font-awesome-sass
   gravatar_image_tag
   guard
   guard-livereload (~> 2.5, >= 2.5.2)
