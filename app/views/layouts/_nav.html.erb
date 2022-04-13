@@ -1,7 +1,8 @@
 <nav class="navbar is-info">
     <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
-            <h1 class="title is-5"> Twitter </h1>
+
+             <span class="title is-2 icon"> <i class="fa fa-twitter" aria-hidden="true" ></i> </span>
         <% end %>
         <div class="navbar-burger burger" data-target="navbarExemple" >
             <span></span>
@@ -16,6 +17,22 @@
                 <p class="control">
                     <%= link_to "New Tweet", new_tweet_path, class: "button is-info is-inverted" %>
                 </p>
+                <% if user_signed_in? %>
+                    <p class="control">
+                        <%= link_to current_user.name, edit_user_registration_path , class: "button is-info " %>
+                    </p>
+                    <p class="control">
+                        <%= link_to "Log Out", destroy_user_session_path ,method: :delete, class: "button is-info " %>
+                    </p>
+                <% else %>
+                    <p class="control">
+                        <%= link_to "Sign In", new_user_session_path , class: "button is-info " %>
+                    </p>
+
+                    <p class="control">
+                        <%= link_to "Sign Up", new_user_registration_path , class: "button is-info " %>
+                    </p>
+                <% end %>
 
             </div>
         </div>

@@ -16,10 +16,15 @@
 
  @import "bulma";
 
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 10px;
 
+}
 
- .navbar-brand .title {
+ .navbar-brand .title .fa-twitter {
      color: white;
+     margin-left: 20px;
  }
 
  .image {
